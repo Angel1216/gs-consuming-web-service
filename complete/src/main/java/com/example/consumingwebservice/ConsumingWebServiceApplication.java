@@ -20,9 +20,11 @@ public class ConsumingWebServiceApplication {
 		return args -> {
 			String country = "Spain";
 
-			if (args.length > 0) {
-				country = args[0];
-			}
+//			if (args.length > 0) {
+//				country = args[0];
+//			}
+			
+			// http://localhost:8080/ws/countries.wsdl
 			GetCountryResponse response = quoteClient.getCountry(country);
 			System.err.println(response.getCountry().getCurrency());
 		};
